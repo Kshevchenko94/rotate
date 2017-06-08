@@ -7,8 +7,10 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
 	'layout'=>'main',
-	'modules' => [
-        
+	 'modules' => [
+        'user' => [
+            'class' => 'app\modules\user\Module',
+        ],
     ],
 	'defaultRoute'=>'login',
     'components' => [
@@ -23,6 +25,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+			'loginUrl'=>'auth',
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',

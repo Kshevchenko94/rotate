@@ -6,12 +6,36 @@ use Yii;
 use yii\web\Controller;
 use app\models\LoginForm;
 use app\models\Registration;
-
+use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 class LoginController extends Controller
 {
 	
 	public $layout = 'auth';
+	
+	    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['logout'],
+                'rules' => [
+                    [
+                        'actions' => ['logout'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post','get'],
+                ],
+            ],
+        ];
+    }
 	
 	public function actionIndex()
 	{
@@ -56,13 +80,10 @@ class LoginController extends Controller
 			}else{
 				return ['status'=>'false'];
 			}
-			return $res;
 		}else{
 			return $this->renderPartial('registration',['model'=>$reg]);
 		}
 	}
 }
-
-
 
 ?>
