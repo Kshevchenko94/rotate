@@ -14,7 +14,7 @@ class LoginController extends Controller
 	
 	public $layout = 'auth';
 	
-	    public function behaviors()
+	public function behaviors()
     {
         return [
             'access' => [
@@ -39,7 +39,6 @@ class LoginController extends Controller
 	
 	public function actionIndex()
 	{
-		
 		if (!Yii::$app->user->isGuest) {
 			return $this->goHome();
 		}

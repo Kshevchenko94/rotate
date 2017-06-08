@@ -12,7 +12,6 @@ $config = [
             'class' => 'app\modules\user\Module',
         ],
     ],
-	'defaultRoute'=>'login',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -52,8 +51,8 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-				'auth'=>'login/index',
-				'auth/registration'=>'login/registration',
+				'login'=>'login/index',
+				'login/registration'=>'login/registration',
             ],
         ],
         

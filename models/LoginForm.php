@@ -9,7 +9,6 @@ class LoginForm extends Model
 {
     public $username;
     public $password;
-    public $rememberMe = false;
 
     private $_user = false;
 
@@ -18,8 +17,6 @@ class LoginForm extends Model
         return [
             // username and password are both required
             [['username', 'password'], 'required', 'message'=>'Поле не может быть пустое!'],
-            // rememberMe must be a boolean value
-            ['rememberMe', 'boolean'],
             // password is validated by validatePassword()
             ['password', 'validatePassword'],
         ];
