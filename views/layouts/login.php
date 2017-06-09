@@ -1,8 +1,5 @@
 <?php
 
-/* @var $this \yii\web\View */
-/* @var $content string */
-
 use yii\helpers\Html;
 use app\assets\AppAsset;
 
@@ -18,7 +15,7 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body style="background:radial-gradient(at bottom, #ffffff,#183765);">
+<body>
 <?php $this->beginBody() ?>
 
 <div class="wrap">

@@ -1,0 +1,95 @@
+body{
+	background:radial-gradient(at bottom, #ffffff,#183765) no-repeat fixed;
+}
+.headerLogin{
+	background:#0e1a35;
+}
+.btn_toggle{
+	border:1px solid #5584ff !important;
+	margin:15px 10px !important;
+}
+.icon-bar{
+	background:#5584ff !important;
+}
+.navbar{
+	margin-bottom:0 !important;
+}
+.logoLogin img {
+	margin:60px;
+}
+@media (max-width: 768px) {
+	.logoLogin img {
+		margin:18px 0px;
+	}
+	.logoLink a{
+	font-size:21px;
+	color:#ffffff;
+	padding:0px ! important;
+	text-align:center;
+}
+.logoLink a:hover{
+	background:none !important;
+	border-bottom:5px solid #5584ff;
+	text-decoration:none;
+	padding:0px !important;
+}
+}
+.logoLink a{
+	font-size:21px;
+	color:#ffffff;
+	padding:65px 50px ! important;
+	text-align:center;
+}
+.logoLink a:hover{
+	background:none !important;
+	border-bottom:5px solid #5584ff;
+	text-decoration:none;
+	padding:65px 50px 60px 50px !important;
+}
+.bodyLogin{
+	background:#ffffff;
+	text-align:center;
+	
+}
+.bodyLogin h1{
+	padding:60px 0px; 
+	margin-top:0 !important;
+}
+.formsLogin{
+	max-width:580px;
+	margin:0 auto;
+	margin-bottom:50px;
+}
+.formsLogin input{
+	border:none;
+	border-radius:0;
+}
+#loginform-username{
+	background:url('/web/images/user.gif') no-repeat;
+	padding-left:50px;
+}
+#loginform-password{
+	background:url('/web/images/lock.gif') no-repeat;
+	padding-left:50px;
+}
+.btn-login{
+	width:190px;
+	border-radius:100px;
+	height:50px;
+	background:#5584ff;
+	color:#ffffff;
+	font-weight:bold;
+}
+.btn-login:hover{
+	color:#ffffff;
+}
+.modal-header{
+	background:#0e1a35;
+}
+.modal-header h2{
+	color:#ffffff;
+	width:300px;
+}
+.modal-dialog{
+	width:70% ! important;
+}

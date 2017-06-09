@@ -12,7 +12,7 @@ use yii\filters\AccessControl;
 class LoginController extends Controller
 {
 	
-	public $layout = 'auth';
+	public $layout = 'login';
 	
 	public function behaviors()
     {
@@ -67,7 +67,7 @@ class LoginController extends Controller
 			if(!$reg::findOne(['login_user'=>Yii::$app->request->post('Registration')['login_user']])){
 				if($reg->load(Yii::$app->request->post()) && $reg->save()){
 					 Yii::$app->session->setFlash('reg_user');
-					 return $this->redirect('/auth');
+					 return $this->redirect('/login');
 				}
 			}
 		}else{
