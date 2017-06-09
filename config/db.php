@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=constanta_web',
+    'dsn' => 'mysql:host=localhost;dbname=rotate',
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',

@@ -45,7 +45,8 @@ class LoginController extends Controller
 
 		$model = new LoginForm();
 		if ($model->load(Yii::$app->request->post()) && $model->login()) {
-			return $this->goBack();
+			//return $this->goBack();
+			return $this->redirect('user');
 		}
 		return $this->render('index', [
 			'login' => $model,
@@ -56,7 +57,7 @@ class LoginController extends Controller
     {
         Yii::$app->user->logout();
 
-        return $this->goHome();
+        return $this->redirect('/login');
     }
 	//method registration
 	public function actionRegistration()
