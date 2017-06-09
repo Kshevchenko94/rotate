@@ -8,8 +8,11 @@ $(function(){
 			data:{login_user:$("#registration-login_user").val()},
 			success:function(response){
 				if(response.status == 'true'){
-					$("#registration-login_user").parent().next().find(".help-block-error").text('Такой пользователь уже существует.');
-					//$(".help-block").addClass('.help-block-error');
+					$("#registration-login_user").parent().next().html("<p style='color:red'>Такой пользователь уже существует.</p>");
+					$("button[name='save']").attr("disabled",true);
+				}else if(response.status == 'false'){
+					$("#registration-login_user").parent().next().html("");
+					$("button[name='save']").attr("disabled",false);
 				}
 			},
 			error:function(){
@@ -22,10 +25,10 @@ $(function(){
 	
 	$("input[type='radio']").change(function(){
 		if($(this).val() == 0){
-			$("#loginform-proxi").val(0);
-			$("#loginform-proxi").attr("disabled",true);
+			$("#registration-proxi").val(0);
+			$("#registration-proxi").attr("disabled",true);
 		}else if($(this).val() == 1){
-			$("#loginform-proxi").attr("disabled",false);
+			$("#registration-proxi").attr("disabled",false);
 		}
 	});
 });
