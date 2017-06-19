@@ -10,6 +10,7 @@ $config = [
 	 'modules' => [
         'user' => [
             'class' => 'app\modules\user\Module',
+            'layout' => 'main',
         ],
     ],
     'components' => [

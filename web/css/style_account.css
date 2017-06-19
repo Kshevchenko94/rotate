@@ -1,0 +1,34 @@
+
+.left_panel{
+	padding-left:0 !important;
+	background:#0e1a35;
+	height:100vh;
+}
+.menu a{
+	padding-left:50px !important;
+	font-size:18px;
+}
+.menu span{
+	margin:0px 10px 0px 0px;
+	color:#5384ff;
+}
+.menu a:link{
+	color:#ffffff;
+}
+.menu a:hover{
+	color:#ffffff;
+	background:#122143 !important;
+	padding-left:47px !important;
+	border-left:3px solid #5584ff;
+}
+.menu a:visited{
+	color:#ffffff;
+}
+.top_panel span{
+	font-size:20px;
+	margin:0px 10px;
+	cursor:pointer;
+}
+.active{
+	border-left:3px solid #5584ff;
+}
