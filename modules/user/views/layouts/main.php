@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use app\assets\AppAsset;
-
+use yii\helpers\Url;
 AppAsset::register($this);
 $this->registerCssFile('/css/style_account.css');
 use yii\bootstrap\Nav;
@@ -21,7 +21,7 @@ use yii\bootstrap\Nav;
 <?php $this->beginBody() ?>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-3 left_panel">
+		<div class="col-md-3 col-xs-3 left_panel">
 			<div class="logo">
 				<?=Html::img('@web/images/logo.png')?>
 			</div>
@@ -32,31 +32,46 @@ use yii\bootstrap\Nav;
 						'options' => ['class' => 'nav'],
 						'encodeLabels'=>false,
 						'items' => [
-							['label' => '<span class="glyphicon glyphicon-home"></span>Главная', 'url' => ['/user']],
-							['label' => 'Ваши аккаунты', 'url' => ['/accounts']],
-							['label' => 'Задания', 'url' => ['/tasks']],
-							['label' => 'Статистика', 'url' => ['/statistic']],
-							['label' => 'Сбор аудитории', 'url' => ['/auditor']],
-							['label' => 'Данные', 'url' => ['/datas']],
-							['label' => 'Настройки', 'url' => ['/settings']],
-							['label' => 'Техподдержка', 'url' => ['/tehpoddershka']],
+							['label' => '<span>'.Html::img('@web/images/icons_menu/home.png').'</span>Главная', 'url' => ['/user']],
+							['label' => '<span>'.Html::img('@web/images/icons_menu/user.png').'</span>Ваши аккаунты', 'url' => ['/accounts']],
+							['label' => '<span>'.Html::img('@web/images/icons_menu/order-form.png').'</span>Задания', 'url' => ['/tasks']],
+							['label' => '<span>'.Html::img('@web/images/icons_menu/chart.png').'</span>Статистика', 'url' => ['/statistic']],
+							['label' => '<span>'.Html::img('@web/images/icons_menu/id-card.png').'</span>Сбор аудитории', 'url' => ['/auditor']],
+							['label' => '<span>'.Html::img('@web/images/icons_menu/cloud_upload.png').'</span>Данные', 'url' => ['/datas']],
+							['label' => '<span>'.Html::img('@web/images/icons_menu/setting_cog.png').'</span>Настройки', 'url' => ['/settings']],
+							['label' => '<span>'.Html::img('@web/images/icons_menu/earphone.png').'</span>Техподдержка', 'url' => ['/tehpoddershka']],
 						]						
 					]);
 				?>
 			</div>
 		</div>
-		<div class="col-md-9 top_panel">
-			<div class="row">
-				<div class="col-md-8">
+		<div class="col-md-9 col-xs-9">
+			<div class="row top_panel">
+				<div class="col-md-6">
 					<span class="glyphicon glyphicon-align-justify"></span>
 					<span class="glyphicon glyphicon-search"></span>
 				</div>
-				<div class="col-md-4">
-					
+				<div class="col-md-6">
+					<div class="col-md-5 tarif_block" style="border:1px solid;">
+						Тариф:Lite<span style="color:#b0b9d9; font-size:10px;">(14 дней)</span>
+					</div>
+					<div class="col-md-3">
+						<span class="glyphicon glyphicon-envelope"></span>
+						<span class="glyphicon glyphicon-bell"></span>
+					</div>
+					<div class="col-md-4 " style="border:1px solid;">
+						<button type="button" class="btn top-right-block account_btn dropdown-toggle" data-toggle="dropdown">
+								D
+								<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+						  <li><a href="<?=Url::to(['/login/logout'])?>">Logout</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12 content">
 					<?= $content ?>
 				</div>
 			</div>
