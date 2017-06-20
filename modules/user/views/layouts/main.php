@@ -55,20 +55,24 @@ use yii\bootstrap\Nav;
 					<span class="glyphicon glyphicon-search"></span>
 				</div>
 				<div class="col-md-6">
-					<div class="col-md-5 tarif_block" style="border:1px solid;">
+					<div class="col-md-4 tarif_block" style="border:1px solid;">
 						Тариф:Lite<span style="color:#b0b9d9; font-size:10px;">(14 дней)</span>
 					</div>
 					<div class="col-md-3">
 						<span class="glyphicon glyphicon-envelope"></span>
 						<span class="glyphicon glyphicon-bell"></span>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-5">
 						<button type="button" class="btn account_btn dropdown-toggle" data-toggle="dropdown">
 								<?=Html::img('@web/images/avatars/drakon.jpg',['width'=>'50px'], ['height'=>'50px'])?>
 								<span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu">
-						  <li><a href="<?=Url::to(['/login/logout'])?>">Logout</a></li>
+						<li><a href="<?=Url::to(['/user/profile'])?>"><span class="glyphicon glyphicon-user"></span>Аккаунт</a></li>
+						<li><a href="<?=Url::to(['/user/paymant'])?>"><span class="glyphicon glyphicon-credit-card"></span>Пополнить баланс</a></li>
+						<li><a href="<?=Url::to(['/user/paymant'])?>"><span class="glyphicon glyphicon-star"></span>Сменить тариф</a></li>
+						<li><a href="<?=Url::to(['/user/paymant'])?>"><span class="glyphicon glyphicon-list-alt"></span>Правила</a></li>
+						  <li><a href="<?=Url::to(['/login/logout'])?>"><span class="glyphicon glyphicon-log-out"></span>Выйти</a></li>
 						</ul>
 					</div>
 				</div>

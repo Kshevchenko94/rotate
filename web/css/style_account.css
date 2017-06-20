@@ -71,3 +71,6 @@ span.caret{
 .table_accounts th{
 	color:#8492af;
 }
+.dropdown-menu span{
+	margin:5px 10px;
+}
