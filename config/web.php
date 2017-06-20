@@ -25,7 +25,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
-			'loginUrl'=>'login',
+			'loginUrl'=>'/login',
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -54,6 +54,7 @@ $config = [
             'rules' => [
 				'login'=>'login/index',
 				'login/registration'=>'login/registration',
+				
             ],
         ],
         
