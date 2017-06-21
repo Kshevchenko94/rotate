@@ -68,11 +68,11 @@ use yii\bootstrap\Nav;
 								<span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu">
-						<li><a href="<?=Url::to(['/user/profile'])?>"><span class="glyphicon glyphicon-user"></span>Аккаунт</a></li>
-						<li><a href="<?=Url::to(['/user/paymant'])?>"><span class="glyphicon glyphicon-credit-card"></span>Пополнить баланс</a></li>
-						<li><a href="<?=Url::to(['/user/paymant'])?>"><span class="glyphicon glyphicon-star"></span>Сменить тариф</a></li>
-						<li><a href="<?=Url::to(['/user/paymant'])?>"><span class="glyphicon glyphicon-list-alt"></span>Правила</a></li>
-						  <li><a href="<?=Url::to(['/login/logout'])?>"><span class="glyphicon glyphicon-log-out"></span>Выйти</a></li>
+							<li><a href="<?=Url::to(['/user/profile'])?>"><span class="glyphicon glyphicon-user"></span>Аккаунт</a></li>
+							<li><a href="<?=Url::to(['/user/paymant'])?>"><span class="glyphicon glyphicon-credit-card"></span>Пополнить баланс</a></li>
+							<li><a href="<?=Url::to(['/user/paymant'])?>"><span class="glyphicon glyphicon-star"></span>Сменить тариф</a></li>
+							<li><a href="<?=Url::to(['/user/paymant'])?>"><span class="glyphicon glyphicon-list-alt"></span>Правила</a></li>
+							<li><a href="<?=Url::to(['/login/logout'])?>"><span class="glyphicon glyphicon-log-out"></span>Выйти</a></li>
 						</ul>
 					</div>
 				</div>
