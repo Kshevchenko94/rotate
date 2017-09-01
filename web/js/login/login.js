@@ -1,3 +1,4 @@
+////////////////////
 $(function(){
 	$("#registration-login_user").blur(function(e){
 		if($("#registration-login_user").val() != ''){
