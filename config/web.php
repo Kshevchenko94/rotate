@@ -53,7 +53,7 @@ $config = [
             'showScriptName' => false,
             'rules' => [
 				'login'=>'login/index',
-				'login/registration'=>'login/registration',
+				'registration'=>'login/registration',
 				
             ],
         ],
