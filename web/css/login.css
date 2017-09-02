@@ -3,6 +3,7 @@ body{
 }
 .headerLogin{
 	background:#0e1a35;
+	border-radius:10px 10px 0px 0px;
 }
 .btn_toggle{
 	border:1px solid #5584ff !important;
@@ -15,41 +16,44 @@ body{
 	margin-bottom:0 !important;
 }
 .logoLogin img {
-	margin:60px;
+	margin:20px 60px;
+}
+
+.logoLink a{
+	font-size:21px;
+	padding:25px 60px !important;
+	color:#ffffff;
+	text-align:center;
+}
+.logoLink a:hover{
+	background:none !important;
+	border-bottom:5px solid #5584ff;
+	text-decoration:none;
+	padding:24px 60px !important;
 }
 @media (max-width: 768px) {
 	.logoLogin img {
-		margin:18px 0px;
+		margin:18px 10px;
 	}
 	.logoLink a{
-	font-size:21px;
+	font-size:18px;
 	color:#ffffff;
-	padding:0px ! important;
+	padding:5px 0px !important;
 	text-align:center;
 }
 .logoLink a:hover{
+	font-size:18px;
 	background:none !important;
-	border-bottom:5px solid #5584ff;
+	border-left:2px solid #5584ff;
+	border-bottom:none;
 	text-decoration:none;
-	padding:0px !important;
+	padding:5px 0px !important;
 }
-}
-.logoLink a{
-	font-size:21px;
-	color:#ffffff;
-	padding:65px 50px ! important;
-	text-align:center;
-}
-.logoLink a:hover{
-	background:none !important;
-	border-bottom:5px solid #5584ff;
-	text-decoration:none;
-	padding:65px 50px 60px 50px !important;
 }
 .bodyLogin{
 	background:#ffffff;
 	text-align:center;
-	
+	padding:20px 0px;
 }
 .bodyLogin h1{
 	padding:60px 0px; 
@@ -60,10 +64,7 @@ body{
 	margin:0 auto;
 	margin-bottom:50px;
 }
-.formsLogin input{
-	border:none;
-	border-radius:0;
-}
+
 #loginform-username{
 	background:url('/web/images/user.gif') no-repeat;
 	padding-left:50px;
@@ -74,7 +75,7 @@ body{
 }
 .btn-login{
 	width:190px;
-	border-radius:100px;
+	border-radius:100px !important;
 	height:50px;
 	background:#5584ff;
 	color:#ffffff;
@@ -83,13 +84,17 @@ body{
 .btn-login:hover{
 	color:#ffffff;
 }
-.modal-header{
-	background:#0e1a35;
+.radio{
+	display:inline-block !important;
+	margin:0px 10px;
 }
-.modal-header h2{
-	color:#ffffff;
-	width:300px;
+#login-form label{
+	color:#183765;
 }
-.modal-dialog{
-	width:70% ! important;
+#login-form input[type="text"],input[type='password'], select,.formsLogin input{
+	border-radius:0px !important;
+	border:none !important;
+	border-bottom:2px solid #eee !important;
+	-webkit-box-shadow:none !important;
+	box-shadow:none!important;
 }

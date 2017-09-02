@@ -14,8 +14,9 @@ class Registration extends ActiveRecord
 	public function rules()
 	{
 		return [
-			[['login_user', 'password_user'], 'required', 'message'=>'Поле не может быть пустым!'],
-			[['proxi', 'checkproxi'], 'safe',],
+			[['name', 'surname','email','login_user', 'password_user', 'rule','sex'], 'required', 'message'=>'Поле не может быть пустым!'],
+			['email','email', 'message'=>'Поле для Email!'],
+			[['avatar'], 'image', 'message'=>'Файл не изображение.']
 		];
 	}
 }

@@ -6,6 +6,7 @@ use Yii;
 use yii\web\Controller;
 use app\models\LoginForm;
 use app\models\Registration;
+use app\models\Rules;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
@@ -39,8 +40,8 @@ class LoginController extends Controller
 	
 	public function actionIndex()
 	{
-		if (!Yii::$app->user->isGuest) {
-			return $this->goHome();
+		if (!\Yii::$app->user->isGuest) {
+			return $this->redirect('user');
 		}
 
 		$model = new LoginForm();
@@ -62,16 +63,19 @@ class LoginController extends Controller
 	//method registration
 	public function actionRegistration()
 	{
+		$rules = Rules::getRules();
 		$reg = new Registration();
 		if(Yii::$app->request->isPost){
 			if(!$reg::findOne(['login_user'=>Yii::$app->request->post('Registration')['login_user']])){
-				if($reg->load(Yii::$app->request->post()) && $reg->save()){
-					 Yii::$app->session->setFlash('reg_user');
-					 return $this->redirect('/login');
+				if($reg->load(Yii::$app->request->post())){
+					$reg->password_user = Yii::$app->getSecurity()->generatePasswordHash(Yii::$app->request->post('Registration')['password_user']);
+					$reg->finish_page = time()+(30*24*60*60);
+					if($reg->save()){
+						Yii::$app->session->setFlash('reg_user');
+						return $this->redirect('/login');
+					}
 				}
 			}
-		}else{
-			return $this->renderPartial('registration',['model'=>$reg]);
 		}
 		if(Yii::$app->request->isAjax){
 			Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
@@ -80,9 +84,8 @@ class LoginController extends Controller
 			}else{
 				return ['status'=>'false'];
 			}
-		}else{
-			return $this->renderPartial('registration',['model'=>$reg]);
 		}
+		return $this->render('registration',['model'=>$reg, 'rules'=>$rules]);
 	}
 }
 

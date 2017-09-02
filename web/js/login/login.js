@@ -1,9 +1,9 @@
-////////////////////
 $(function(){
+	alert('vrrvrv');
 	$("#registration-login_user").blur(function(e){
 		if($("#registration-login_user").val() != ''){
 			$.ajax({
-			url:'/login/registration',
+			url:'/registration',
 			type:'POST',
 			dataType:"json",
 			data:{login_user:$("#registration-login_user").val()},
@@ -23,13 +23,5 @@ $(function(){
 		}
 		
 	});  
-	
-	$("input[type='radio']").change(function(){
-		if($(this).val() == 0){
-			$("#registration-proxi").val(0);
-			$("#registration-proxi").attr("disabled",true);
-		}else if($(this).val() == 1){
-			$("#registration-proxi").attr("disabled",false);
-		}
-	});
+
 });
