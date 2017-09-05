@@ -37,7 +37,6 @@ $this->registerCssFile('css/login.css');
 		  <!-- Навигационное меню -->
 			<div id="navbarCollapse" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right logoLink">
-					<li><?= Html::a('Регистрация', ['/registration/'], ['class' => '']) ?></li>
 				  <li><?= Html::a('Войти', ['/login/'], ['class' => '']) ?></li>
 				</ul>
 			</div>
